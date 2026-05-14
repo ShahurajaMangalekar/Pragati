@@ -5,7 +5,11 @@ import { useAuth } from '../context/AuthContext';
 const API = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 const tk = () => ({ Authorization: `Bearer ${localStorage.getItem('pragati_token')}` });
 const apiFetch = p => fetch(`${API}${p}`, { headers: tk() }).then(r => r.json()).catch(() => null);
-
+const txt = 'black'
+const muted = 'gray';
+const sub = '';
+const rowHover = {};
+const secBg = 'white';
 function Stat({ icon, label, value, sub, grad, onClick }) {
   return (
     <div onClick={onClick} className="card" style={{ padding:'18px 16px', cursor:onClick?'pointer':'default', position:'relative', overflow:'hidden', transition:'transform .2s' }}
@@ -15,7 +19,7 @@ function Stat({ icon, label, value, sub, grad, onClick }) {
       <div style={{ fontSize:'1.3rem', marginBottom:6 }}>{icon}</div>
       <div style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, fontSize:'1.5rem', background:grad, WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text', lineHeight:1 }}>{value??'—'}</div>
       <div style={{ fontSize:'.78rem', fontWeight:700, color:'#3d4e6b', marginTop:4 }}>{label}</div>
-      {sub&&<div style={{ fontSize:'.68rem', color:muted, marginTop:2 }}>{sub}</div>}
+      {sub&&<div style={{ fontSize:'.68rem', color:"gray", marginTop:2 }}>{sub}</div>}
     </div>
   );
 }
