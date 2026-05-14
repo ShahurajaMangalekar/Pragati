@@ -41,7 +41,7 @@ export default function PuzzleRoundPage() {
   const [answers, setAnswers] = useState({});
   const [showHint, setShowHint] = useState({});
   const [showAnswer, setShowAnswer] = useState({});
-  const [correct, setCorrect] = useState({});
+  
   const [showRes, setShowRes] = useState(false);
 
   return (

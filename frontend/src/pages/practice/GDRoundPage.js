@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { RoundHeader, Card, SectionTitle, AnswerBox, Timer } from './PracticeComponents';
 import { ROUND_RESOURCES } from './RESOURCES';
 
